@@ -7,11 +7,11 @@ states = {
 
 }
 
-cities = {
-    'CA': 'San Francisco',
-    'MI': 'Detroit',
-    'FL': 'Jacksonville'
-}
+cities = dict()
+
+cities['CA'] = 'San Francisco'
+cities['MI'] = 'Detroit'
+cities['FL'] = 'Jacksonville'
 
 cities['NY'] = 'New York'
 cities['OR'] = 'Portland'
@@ -32,7 +32,8 @@ print('-' * 10)
 print("Michigan has: ", cities[states['Michigan']])
 print("Florida has: ", cities[states['Florida']])
 
-# print every state abbreviation 37 print('-' * 10)
+# print every state abbreviation 37
+print('-' * 10)
 for state, abbrev in list(states.items()):
     print(f"{state} is abbreviated {abbrev}")
 
@@ -61,7 +62,7 @@ city = cities.get('TX', 'Does Not Exist')
 print(f"The city for the state 'TX' is: {city}")
 
 # study drills
-'''
+
 # ex39: Dictionaries, Oh Lovely Dictionaries
 
 # create a mapping of state to abbreviation
@@ -74,11 +75,11 @@ states = {
 }
 
 # create a basic set of states and some cities in them
-cities = {
-    'CA': 'San Fransisco',
-    'MI': 'Detroit',
-    'FL': 'Jacksonville'
-    }
+cities = dict()
+
+cities['CA'] = 'San Francisco'
+cities['MI'] = 'Detroit'
+cities['FL'] = 'Jacksonville'
 
 # add some more cities
 cities['NY'] = 'New York'
@@ -130,11 +131,11 @@ cn_province = {
     }
 
 # create a basic set of provinces and some cities in them
-cn_cities = {
-    '粤': '广州',
-    '湘': '长沙',
-    '川': '成都',
-    }
+
+cn_cities = dict()
+cn_province['粤'] = '广州',
+cn_province['湘'] = '长沙',
+cn_province['川'] = '成都',
 
 # add some more data
 cn_province['台湾'] = '台'
@@ -153,4 +154,4 @@ for abbrev, prov in cn_abbrevs.items():
 
 print('-' * 10)
 for abbrev, city in cn_cities.items():
-    print("%s市位于我国的%s省" % (city, cn_abbrevs[abbrev]))'''
+    print("%s市位于我国的%s省" % (city, cn_abbrevs[abbrev]))
